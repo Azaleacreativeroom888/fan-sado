@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>一服の庵 | 茶道のサイト</title>
+<style>
+  :root {
+    --cream: #f4efe0;
+    --paper: #faf6ea;
+    --matcha: #7d8f3f;
+    --matcha-dark: #3f4d24;
+    --tea: #8a5a2b;
+    --ink: #2e2a24;
+    --shu: #b8322a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "游明朝", serif;
+    line-height: 1.9;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  header {
+    background: var(--matcha-dark);
+    color: var(--paper);
+    border-bottom: 4px solid var(--matcha);
+  }
+  .header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .logo { font-size: 1.4rem; letter-spacing: .3em; }
+  .logo span { color: var(--shu); margin-right: 6px; }
+  nav ul { list-style: none; display: flex; gap: 22px; }
+  nav a { letter-spacing: .15em; padding-bottom: 2px; border-bottom: 1px solid transparent; }
+  nav a:hover, nav a.current { border-bottom-color: var(--paper); }
+
+  .hero {
+    background: linear-gradient(180deg, #c9d29a 0%, var(--cream) 100%);
+    text-align: center;
+    padding: 56px 20px 48px;
+  }
+  .bowl { width: 150px; height: 90px; margin: 0 auto 8px; position: relative; }
+  .bowl .tea {
+    position: absolute; top: 0; left: 8px; right: 8px; height: 26px;
+    background: var(--matcha); border-radius: 50%;
+    box-shadow: inset 0 -4px 0 #a5b560;
+  }
+  .bowl .body {
+    position: absolute; top: 12px; left: 0; right: 0; height: 78px;
+    background: var(--tea); border-radius: 0 0 75px 75px / 0 0 78px 78px;
+    z-index: -1;
+  }
+  .bowl .foot {
+    position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
+    width: 54px; height: 10px; background: #6b4420; border-radius: 0 0 6px 6px;
+  }
+  .hero h1 { font-size: 2rem; letter-spacing: .4em; margin: 28px 0 8px; color: var(--matcha-dark); font-weight: normal; }
+  .hero p { letter-spacing: .15em; color: var(--tea); }
+  .hero .seal {
+    display: inline-block; margin-top: 18px;
+    background: var(--shu); color: var(--paper);
+    padding: 4px 10px; font-size: .85rem; letter-spacing: .2em; border-radius: 2px;
+  }
+
+  main { max-width: 960px; margin: 0 auto; padding: 40px 20px 20px; }
+  section { margin-bottom: 48px; }
+  h2 {
+    font-size: 1.3rem; font-weight: normal; letter-spacing: .25em;
+    color: var(--matcha-dark);
+    border-left: 6px solid var(--matcha);
+    padding-left: 12px; margin-bottom: 16px;
+  }
+  .card {
+    background: var(--paper);
+    border: 1px solid #d9d2b8;
+    border-radius: 4px;
+    padding: 22px 24px;
+  }
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+  .cols .card h3 { font-weight: normal; color: var(--tea); letter-spacing: .15em; margin-bottom: 6px; }
+  .cols .card .kanji { font-size: 2rem; color: var(--shu); line-height: 1.2; }
+
+  .news { list-style: none; }
+  .news li { display: flex; gap: 18px; padding: 10px 0; border-bottom: 1px dashed #c9c1a3; }
+  .news time { color: var(--matcha); white-space: nowrap; }
+
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .links a {
+    display: block; text-align: center; padding: 18px;
+    background: var(--matcha); color: var(--paper); letter-spacing: .25em; border-radius: 4px;
+  }
+  .links a:hover { background: var(--matcha-dark); }
+
+  footer {
+    background: var(--matcha-dark); color: var(--paper);
+    text-align: center; padding: 20px; font-size: .85rem; letter-spacing: .15em;
+  }
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 1.5rem; letter-spacing: .25em; }
+    nav ul { gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html"><span>●</span>一服の庵</a>
+    <nav>
+      <ul>
+        <li><a class="current" href="index.html">ホーム</a></li>
+        <li><a href="blog.html">日記</a></li>
+        <li><a href="gallery.html">ギャラリー</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="bowl"><div class="tea"></div><div class="body"></div><div class="foot"></div></div>
+  <h1>一服の庵</h1>
+  <p>茶の湯を学び、味わい、記す場所</p>
+  <span class="seal">茶道</span>
+</div>
+
+<main>
+  <section>
+    <h2>茶道とは</h2>
+    <div class="card">
+      <p>茶道は、お茶を点て、客をもてなし、共にいただく日本の伝統文化です。お点前の作法だけでなく、茶室のしつらえ、季節の花、掛け軸、茶碗、お菓子など、さまざまな要素が一つの時間をつくります。このサイトでは、茶道について学んだことやお稽古の記録を、ゆっくり綴っていきます。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>茶道の心</h2>
+    <div class="cols">
+      <div class="card"><div class="kanji">和</div><h3>和</h3><p>おだやかな心で互いに調和し、場を整えること。</p></div>
+      <div class="card"><div class="kanji">敬</div><h3>敬</h3><p>人も道具も自然も、敬う気持ちを大切にすること。</p></div>
+      <div class="card"><div class="kanji">清</div><h3>清</h3><p>身のまわりも心も、清らかに保つこと。</p></div>
+      <div class="card"><div class="kanji">寂</div><h3>寂</h3><p>静けさの中にある美しさを味わうこと。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>お知らせ</h2>
+    <div class="card">
+      <ul class="news">
+        <li><time datetime="2026-11-17">2026.11.17</time><span>サイトを作りはじめました。</span></li>
+        <li><time datetime="2026-11-17">2026.11.17</time><span>日記・ギャラリー・このサイトについて、順次公開予定です。</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>ページ案内</h2>
+    <div class="links">
+      <a href="blog.html">日記</a>
+      <a href="gallery.html">ギャラリー</a>
+      <a href="about.html">このサイトについて</a>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; 2026 一服の庵</footer>
+
+</body>
+</html>
